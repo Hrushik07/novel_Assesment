@@ -16,7 +16,7 @@ function ErrorPage() {
       }}
     >
       <Typography variant="h3">
-        Somthing went wrong in the appliaction
+        Something went wrong in the application
       </Typography>
 
       <Button sx={{ mt: 3 }} variant="outlined" onClick={() => Navigate("/")}>

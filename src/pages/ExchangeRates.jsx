@@ -3,7 +3,7 @@ import React from 'react'
 
 function ExchangeRates() {
   return (
-    <Typography color='error'>Error fetching rates</Typography>
+    <Typography variant='h6' color='error'>Error fetching rates</Typography>
   )
 }
 
