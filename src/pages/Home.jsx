@@ -124,7 +124,7 @@ function Home() {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
-          gap: 2,
+          gap: 3,
           flexWrap: "wrap",
           mb: 2,
         }}
