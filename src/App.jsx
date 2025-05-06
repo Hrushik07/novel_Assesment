@@ -1,11 +1,19 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { CustomThemeProvider } from "./components/ThemeContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ErrorPage from "./pages/ErrorPage";
-import ExchangeRates from "./pages/ExchangeRates";
 import AppLayout from "./components/AppLayout";
+import { Box } from "@mui/material";
+
+const ExchangeRates = lazy(() => import("./pages/ExchangeRates"));
+
+const Loading = () => (
+  <Box>
+    <h2>Loading Exchange Rates...</h2>
+  </Box>
+);
 
 const approute = createBrowserRouter([
   {
@@ -18,7 +26,11 @@ const approute = createBrowserRouter([
   },
   {
     path: "/exchange_rates_live",
-    element: <ExchangeRates />,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <ExchangeRates />
+      </Suspense>
+    ),
   },
   {
     path: "*",
