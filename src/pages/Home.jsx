@@ -133,16 +133,19 @@ function Home() {
           label="Loan Amount"
           value={loanAmount}
           onChange={(e) => setLoanAmount(e.target.value)}
+          type="number"
         />
         <TextField
           label="Interest Rate (%)"
           value={rate}
           onChange={(e) => setRate(e.target.value)}
+          type="number"
         />
         <TextField
           label="Term (Years)"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
+          type="number"
         />
       </Box>
 
